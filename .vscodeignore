@@ -1,0 +1,7 @@
+.vscode/**
+.vscode-test/**
+themes/**
+!themes/Ymox Solarized Burst-color-theme.json
+.gitignore
+**.vsix
+**.php

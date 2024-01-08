@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+	<!--
+
+	This document is used visually inspect how tokens are stylized across different themes in VS Code.
+
+	Pay attention to the constant named 'myThemeData'. It is an array of objects, each object has 3 keys:
+	'name', 'editorBackground', and tokenColors. The editorBackground and tokenColor data is copied
+	from the JSON data seen by using the 'Developer: Generate Color Theme From Current Settings'
+	command in VS Code. The name is simply the theme's display name as seen in the VS Code menu.
+
+	-->
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Colors</title>
+	<style>
+	section {
+		padding: 25px;
+		border-radius: 25px;
+		margin-bottom: 25px;
+		background-color: #1e1e1e;
+	}
+	p {
+		font-family: monospace;
+		margin: 0;
+	}
+	p + p {
+		margin-top: 25px;
+	}
+	</style>
+</head>
+<body>
+	<script type="module">
+	import themeData from './themes/Ymox Solarized Burst-color-theme.json' assert { type: 'json'};
+	themeData.forEach(theme => {
+
+		const body = document.getElementsByTagName('body')[0];
+		body.appendChild(document.createElement('h2')).textContent = theme.name;
+
+		const section = body.appendChild(document.createElement('section'));
+
+		// Create a set (array of distinct values) of colors then walk through the set
+		new Set(theme.tokenColors.map(item => item.settings.foreground)).forEach((color) => {
+
+		// Filter the tokens down to just the ones that use this color.	These tokens will all be
+		// put into the document inside a <p> element, each token as a <span> element.
+		const tokens = theme.tokenColors.filter(token => token.settings.foreground == color);
+
+		const spanElements = tokens.map(token => {
+
+			// Start by creating a new span element
+			const rtn = document.createElement('span');
+
+			// Use the scope for the textContent
+			rtn.textContent = Array.isArray(token.scope) ? token.scope.join(' | ') : token.scope.replace(/\,\s*/g, ' | ');
+
+			// See what's under the fontStyle key, apply inline CSS stylings apprporiately
+			const fontStyle = token.settings.fontStyle == undefined ? '' : token.settings.fontStyle;
+			if (fontStyle.includes('bold')) { rtn.style.fontWeight = 'bolder'; }
+			if (fontStyle.includes('italic')) { rtn.style.fontStyle = 'italic'; }
+			if (fontStyle.includes('underline')) { rtn.style.textDecoration = 'underline'; }
+
+			return rtn;
+		});
+
+		const p = section.appendChild(document.createElement('p'));
+		p.style.color = color;
+		p.innerHTML = spanElements.map(span => span.outerHTML).join(' | ');
+		});
+	});
+	</script>
+</body>
+</html>
