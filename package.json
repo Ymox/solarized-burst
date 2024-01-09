@@ -1,24 +1,30 @@
 {
 	"name": "solarized-burst-theme",
 	"displayName": "Ymox Solarized Burst",
-	"description": "Ymox variation over Sunburst and Solarized (dark) themes. Formerly Burned Ymox",
+	"description": "Ymox variation over Sunburst and Solarized (dark) themes",
 	"publisher": "Ymox",
-	"version": "2.0.0",
+	"version": "2.0.1",
 	"license": "MIT",
 	"icon": "ymox-solarized-burst-theme.png",
 	"engines": {
-		"vscode": "^1.52.0"
+		"vscode": "*"
 	},
 	"categories": [
-		"Themes",
-		"Programming Languages"
+		"Themes"
 	],
 	"contributes": {
 		"themes": [
 			{
-				"label": "Ymox Solarized Burst",
+				"id": "Ymox Solarized Burst Visual Studio Dark",
+				"label": "Solarized Burst (Visual Studio)",
 				"uiTheme": "vs-dark",
 				"path": "./themes/Ymox Solarized Burst-color-theme.json"
+			},
+			{
+				"id": "Ymox Solarized Burst Default Dark Modern",
+				"label": "Solarized Burst (Modern)",
+				"uiTheme": "vs-dark",
+				"path": "./themes/Ymox Solarized Burst Modern-color-theme.json"
 			}
 		]
 	}

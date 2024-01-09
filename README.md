@@ -2,19 +2,38 @@
 
 Ymox variation over Sunburst and Solarized (dark) themes.
 
-Only adds custom syntax highlighting, does rely on an existing dark theme to work.
+Provides integration with Visual Studio and Modern dark IDE colours.
 
 This is mainly for web related languages. Below are a few examples.
 
 ## Big picture
 
-<pre style="color: #bbbbbb; background-color: #1e1e1e;"><code>default, <span style="color: #808080;">comments</span>
-<span style="color: #3e87e3;">variables</span>, <span style="color: #99cf50;">keywords</span>, <span style="color: #aa0000;">strings (with enclosures)w</span>, <span style="color: #008080;">numbers</span>, <span style="color: #e28964;">functions</span>, <span style="color: #b7f8ff;">OOP class</span>, <span style="color: #5555ff;">OOP class member</span> and <span style="color: #5555ff;">constants</span>/<span style="color: #5555ff;">readonly</span>, <span style="color: #89bdff;">OOP class method</span>
-<span style="color: #f4e19d;">tags</span>, <span style="color: #008000;">attributes</span>, <span style="color: #c64432;">(x)HTML entities</span></code></pre>
+In order to display this in markdown on GitHub, here are some examples of main colours generated through [placehold.co](https://placehold.co/). Use this raw file with another markdown renderer to preview languages syntax highlighting.
+
+<div align="center">
+
+![default: `#bbbbbb`](https://placehold.co/84x24/1E1E1E/BBBBBB/svg?text=default&font=Open+Sans "bbbbbb")  
+![comments: `#808080`](https://placehold.co/96x24/1E1E1E/808080/svg?text=comments&font=Open+Sans "808080")
+
+![strings (with enclosures): `#aa0000`](https://placehold.co/300x24/1E1E1E/AA0000/svg?text=strings+(with+enclosures)&font=Open+Sans "aa0000")  
+![numbers: `#008080`](https://placehold.co/84x24/1E1E1E/008080/svg?text=numbers&font=Open+Sans "008080")  
+![keywords: `#99cf50`](https://placehold.co/96x24/1E1E1E/99CF50/svg?text=keywords&font=Open+Sans "99cf50")  
+![variables: `#3e87e3`](https://placehold.co/120x24/1E1E1E/3E87E3/svg?text=variables&font=Open+Sans "3e87e3")  
+![functions: `#e28964`](https://placehold.co/108x24/1E1E1E/E28964/svg?text=functions&font=Open+Sans "e28964")  
+![OOP class: `#b7f8ff`](https://placehold.co/108x24/1E1E1E/B7F8FF/svg?text=OOP+class&font=Open+Sans "b7f8ff")  
+![OOP class member, constants/enums/readonly: `#5555ff`](https://placehold.co/504x24/1E1E1E/5555FF/svg?text=OOP+class+member,+constants%2Fenums%2Freadonly&font=Open+Sans "5555ff")  
+![OOP class method: `#89bdff`](https://placehold.co/192x24/1E1E1E/89BDFF/svg?text=OOP+class+method&font=Open+Sans "89bdff")
+
+![tags: `#f4e19d`](https://placehold.co/48x24/1E1E1E/F4E19D/svg?text=tags&font=Open+Sans "f4e19d")  
+![attributes: `#008000`](https://placehold.co/132x24/1E1E1E/008000/svg?text=attributes&font=Open+Sans "008000")  
+![(x)HTML entities: `#c64432`](https://placehold.co/192x24/1E1E1E/C64432/svg?text=(x)HTML+entities&font=Open+Sans "c64432")
+</div>
 
 Excepted in Markdown, no font variant are used (italic, bold, etc.).
 
-## HTML
+## Languages
+
+### HTML
 
 <pre style="color: #bbbbbb; background-color: #1e1e1e;"><code><span style="color: #f4e19d;">&lt;!</span><span style="color: #a00000;">DOCTYPE html</span><span style="color: #f4e19d;">&gt;</span>
 <span style="color: #f4e19d;">&lt;html</span> <span style="color: #008000;">xmlns</span>=<span style="color: #aa0000;">"http://www.w3.org/1999/xhtml"</span> <span style="color: #008000;">lang</span>=<span style="color: #aa0000;">"en"</span> <span style="color: #008000;">xml:lang</span>=<span style="color: #aa0000;">"en"</span><span style="color: #f4e19d;">&gt;</span>
@@ -31,7 +50,7 @@ Excepted in Markdown, no font variant are used (italic, bold, etc.).
 	<span style="color: #f4e19d;">&lt;/body&gt;</span>
 <span style="color: #f4e19d;">&lt;/html&gt;</span></code></pre>
 
-## PHP
+### PHP
 
 <pre style="color: #bbbbbb;background-color: #1e1e1e;"><code><span style="color: #808080;">#[ORM</span>\<span style="color: #9cbcc0;">Entity</span>(<span style="color: #5f84b2;">repositoryClass</span>: <span style="color: #b7f8ff;">UserRepository</span>::<span style="color: #99cf50;">class</span>)<span style="color: #808080;">]</span>
 <span style="color: #808080;">#[</span><span style="color: #9cbcc0;">UniqueEntity</span>(<span style="color: #5f84b2;">fields</span>: [<span style="color: #aa0000;">'name'</span>], <span style="color: #5f84b2;">message</span>: <span style="color: #aa0000;">'app.user.not_unique'</span>)<span style="color: #808080;">]</span>
@@ -41,7 +60,7 @@ Excepted in Markdown, no font variant are used (italic, bold, etc.).
     <span style="color: #808080;">#[ORM</span>\<span style="color: #9cbcc0;">Column</span>(<span style="color: #5f84b2;">length</span>: <span style="color: #008080;">180</span>, <span style="color: #5f84b2;">unique</span>: <span style="color: #99cf50;">true</span>)<span style="color: #808080;">]</span>
     <span style="color: #99cf50;">private</span> ?<span style="color: #99cf50;">string</span> <span style="color: #3e87e3;">$name</span> = <span style="color: #99cf50;">null</span>;</code></pre>
 
-## CSS
+### CSS
 
 <pre style="color: #bbbbbb; background-color: #1e1e1e;"><code><span style="color: #f4e19d;">body</span> {
     <span style="color: #3e87e3;">--space</span>: <span style="color: #008080;">1.5</span><span style="color: #99cf50;">em</span>;
@@ -64,7 +83,7 @@ Excepted in Markdown, no font variant are used (italic, bold, etc.).
     }
 }</code></pre>
 
-## JavaScript
+### JavaScript
 
 <pre style="color: #bbbbbb; background-color: #1e1e1e;"><code><span style="color: #808080;">/**</span>
 <span style="color: #808080;"> * </span>
@@ -89,7 +108,7 @@ Excepted in Markdown, no font variant are used (italic, bold, etc.).
     });
 });</code></pre>
 
-## TypeScript (TSX)
+### TypeScript (TSX)
 
 <pre style="color: #bbbbbb; background-color: #1e1e1e;"><code><span style="color: #f4e19d;">&lt;</span><span style="color: #f4e19d;">template</span><span style="color: #f4e19d;">&gt;</span>
 	<span style="color: #f4e19d;">&lt;</span><span style="color: #f4e19d;">input</span> :<span style="color: #008000;">id</span>=<span style="color: #aa0000;">"</span><span style="color: #89bdff;">dynamicId</span>(<span style="color: #aa0000;">'P'</span>)<span style="color: #aa0000;">"</span> <span style="color: #008000;">type</span>=<span style="color: #aa0000;">"checkbox"</span> <span style="color: #008000;">value</span>=<span style="color: #aa0000;">"on"</span> <span style="color: #008000;">part</span>=<span style="color: #aa0000;">"positive"</span> :<span style="color: #008000;">title</span>=<span style="color: #aa0000;">"</span><span style="color: #5555ff;">positiveLabel</span><span style="color: #aa0000;">"</span> :<span style="color: #008000;">name</span>=<span style="color: #aa0000;">"</span><span style="color: #5555ff;">positiveName</span><span style="color: #aa0000;">"</span> :<span style="color: #008000;">checked</span>=<span style="color: #aa0000;">"</span><span style="color: #5555ff;">value</span> === <span style="color: #aa0000;">'on'</span><span style="color: #aa0000;">"</span> :<span style="color: #008000;">class</span>=<span style="color: #aa0000;">"</span><span style="color: #5555ff;">positiveInputClasses</span><span style="color: #aa0000;">"</span> @<span style="color: #008000;">change</span>=<span style="color: #aa0000;">"</span><span style="color: #89bdff;">change</span><span style="color: #aa0000;">"</span><span style="color: #f4e19d;">&gt;</span>
@@ -120,7 +139,7 @@ Excepted in Markdown, no font variant are used (italic, bold, etc.).
 	}
 }) <span style="color: #99cf50;">as</span> <span style="color: #b7f8ff;">Ref</span>&lt;{}&gt;</code></pre>
 
-## YAML
+### YAML
 
 <pre style="color: #bbbbbb; background-color: #1e1e1e;"><code><span style="color: #f4e19d;">app</span>:
   <span style="color: #f4e19d;">login</span>: <span style="color: #99cf50;">&amp;</span><span style="color: #b7f8ff;">login</span>
@@ -136,7 +155,7 @@ Excepted in Markdown, no font variant are used (italic, bold, etc.).
     <span style="color: #f4e19d;">boum</span>: <span style="color: #99cf50;">~</span>
     <span style="color: #f4e19d;">yeye</span>: <span style="color: #99cf50;">off</span></code></pre>
 
-## Twig
+### Twig
 
 <pre style="color: #bbbbbb; background-color: #1e1e1e;"><code><span style="color: #f4e19d;">&lt;!</span><span style="color: #a00000;">DOCTYPE html</span><span style="color: #f4e19d;">&gt;</span>
 <span style="color: #f4e19d;">&lt;html&gt;</span>
@@ -165,7 +184,7 @@ Excepted in Markdown, no font variant are used (italic, bold, etc.).
 	<span style="color: #f4e19d;">&lt;/body&gt;</span>
 <span style="color: #f4e19d;">&lt;/html&gt;</span></code></pre>
 
-## SQL
+### SQL
 
 <pre style="color: #bbbbbb; background-color: #1e1e1e;"><code><span style="color: #99cf50;">INSERT</span> <span style="color: #99cf50;">INTO</span>
         <span style="color: #aa0000;">`new`</span>.<span style="color: #aa0000;">`values`</span>
@@ -182,6 +201,6 @@ Excepted in Markdown, no font variant are used (italic, bold, etc.).
         <span style="color: #99cf50;">WHERE</span>
                 pv.id <span style="color: #99cf50;">NOT</span> <span style="color: #99cf50;">IN</span> (<span style="color: #aa0000;">`new`</span>.<span style="color: #aa0000;">`values`</span>.<span style="color: #aa0000;">`id`</span>)</code></pre>
 
-<!-- ## 
+<!-- ### 
 
 <pre style="color: #bbbbbb; background-color: #1e1e1e;"><code></code></pre> -->

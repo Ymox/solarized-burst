@@ -1,3 +1,4 @@
 **.vsix
 themes/**
 !themes/Ymox Solarized Burst.jsonc
+!themes/Ymox Solarized Burst Modern-color-theme.json
