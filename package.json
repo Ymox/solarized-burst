@@ -2,6 +2,10 @@
 	"name": "solarized-burst-theme",
 	"displayName": "Ymox Solarized Burst",
 	"description": "Ymox variation over Sunburst and Solarized (dark) themes",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Ymox/solarized-burst"
+	},
 	"publisher": "Ymox",
 	"version": "2.0.1",
 	"license": "MIT",
