@@ -2,6 +2,7 @@
 .vscode-test/**
 themes/**
 !themes/Ymox Solarized Burst-color-theme.json
+!themes/Ymox Solarized Burst Modern-color-theme.json
 .gitignore
 **.vsix
 **.php
