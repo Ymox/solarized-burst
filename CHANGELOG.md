@@ -1,6 +1,14 @@
 # Change Log
 
-## Unreleased (2.0.0)
+## 2.0.2
+
+- Dark Modern variant
+
+## 2.0.1
+
+- jsx, tsx, graphQL support
+
+## 2.0.0
 
 - VSIX packaging
 - JSON instead of tmTheme
